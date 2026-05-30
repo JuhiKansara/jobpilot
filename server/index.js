@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Routes (we'll add more soon)
 app.use('/api/jobs', require('./routes/jobs'));
+app.use('/api/auth', require('./routes/auth'));
 
 app.get('/', (req, res) => {
   res.send('JobPilot API is running');
