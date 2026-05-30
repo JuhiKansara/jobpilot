@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 // PUT update job
 router.put('/:id', async (req, res) => {
   try {
-    const job = await Job.findByIdAndUpdate(req.id, req.body, { new: true });
+    const job = await Job.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(job);
   } catch (err) {
     res.status(400).json({ message: err.message });
